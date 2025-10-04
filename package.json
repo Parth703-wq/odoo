@@ -1,0 +1,27 @@
+{
+  "name": "expense-reimbursement-system",
+  "version": "1.0.0",
+  "description": "Modern Expense Reimbursement & Approval Workflow System",
+  "main": "backend/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
+  "keywords": [
+    "expense",
+    "reimbursement",
+    "approval",
+    "workflow",
+    "ocr",
+    "multi-currency"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
