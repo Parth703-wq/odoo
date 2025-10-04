@@ -1,27 +1,30 @@
 {
-  "name": "expense-reimbursement-system",
+  "name": "expense-server",
   "version": "1.0.0",
-  "description": "Modern Expense Reimbursement & Approval Workflow System",
-  "main": "backend/index.js",
+  "description": "Backend server for Expense Reimbursement System",
+  "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "backend": "cd backend && npm run dev",
-    "frontend": "cd frontend && npm start",
-    "build": "cd frontend && npm run build",
-    "start": "cd backend && npm start",
-    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seed": "node scripts/seed.js"
   },
-  "keywords": [
-    "expense",
-    "reimbursement",
-    "approval",
-    "workflow",
-    "ocr",
-    "multi-currency"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "multer": "^1.4.5-lts.1",
+    "axios": "^1.6.2",
+    "tesseract.js": "^5.0.4",
+    "sharp": "^0.33.1",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "morgan": "^1.10.0"
+  },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "nodemon": "^3.0.2"
   }
 }
